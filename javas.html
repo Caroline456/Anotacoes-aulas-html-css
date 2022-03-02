@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript</title>
+    <style>
+        body{
+            background-color: #F4F4F6;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: justify;
+        }
+        main {
+            font-size: 1.5em;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 5px 5px 15px #67676d;
+            width: 1000px;
+            padding: 10px;
+            margin: auto;
+        }
+        h1 {
+            color: #0C1B33;
+            text-align: center;
+            font-size: 3em;
+            text-shadow: 1px 1px 2px #131212;
+        }
+        h2 {
+            color: rgb(201, 149, 17);
+            font-size: 1.5em;
+            
+        }
+        h3 {
+            color: #0C1B33;
+        }
+        .ex {
+            font-size: 0.7em;
+        }
+
+        h3#precedencia {
+            color: #6d0505;
+            background-color: #6d050523;
+            text-align: center;
+            width: 700px;
+        }
+        .ari {
+            color: #6d0505;
+            text-align: center;
+            background-color: #6d050523;
+            width: 350px;
+        }
+        .ter {
+            background-color: #6d0505;
+            color: #ffffff;
+        }
+
+        img {
+            display: block;
+            margin: auto;
+            width: 90%;
+        }
+
+        img.fuc {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>JavaScript</h1>
+        <p>
+            JavaScript é uma linguagem de programação utilizada para criar interações em um site. O ECMAscript é a padronização internacional dessa linguagem, a última versão é de 2018. <br>
+            É importante frisar que JavaScript e java sao linguagens completamente diferentes. A semelhança no nome foi uma estrátégia de marketing por parte dos criadores do JS, pois o nome java estava famoso na época em que eles desenvolveram essa linguagem.
+        </p>
+        <h2>Tecnologias baseadas em JS</h2>
+        <p>Framework na área de TI é um conjunto de códigos genéricos capaz de unir trechos de um projeto. Abaixo temos alguns frameworks baseados em JavaScript:</p>
+        <ul>
+            <li>Jquery</li>
+            <li>Angular</li>
+            <li>React (biblioteca do facebook)</li>
+            <li>Vue</li>
+            <li>Electron</li>
+            <li>Ionic</li>
+            <li>Cordova</li>
+
+
+        </ul>
+        <h2>variáveis e tipos primitivos</h2>
+        <p>
+            Variáveis são o termo que carrega a informação e são representadas pela sigla 'var'. <br>
+            EXEMPLO:
+        </p>
+        <pre>
+            var n1 = 3
+            var n2 = 5
+            var s = n1 + n2
+            alert(`Resultado ${n1} + ${n2} = ${s}`)
+        </pre>
+        <p>
+            Tipos primitivos são os tipos de informação que as variáveis carregam. Principais:
+        </p>
+        <ul>
+            <li>Number</li>
+            <li>String (conjunto de caracters, número ou letas. ex: nomes, CPF)</li>
+            <li>Boolean (true or false)</li>
+            <li>null (torna uma variável vazia)</li>
+            <li>undefined</li>
+            <li>Object</li>
+            <li>function</li>
+        </ul>
+        <h2>Funções que aprendi até agora</h2>
+        <ul>
+            <li><b>window.prompt('')</b> - cria um pop-up com campo para resposta escrita</li>
+            <li><b>window.alert('')</b> - cria um pop-up com ok e cancelar</li>
+            <li><b>document.write(``)</b> - Mostra a resposta do prompt na tela</li>
+            <li><b>.toUpperCase()</b> -  deixa todas as letras da variável maiúculas. <br>
+                (ex: nome.toUpperCase() = CAROL)</li>
+            <li><b>.toFixed(2)</b> - mostra mais casas decimais após a vírgula de um número (dentro do parênteses você bota a quantidade de casas desejada)</li>
+            <li><b>.tolocaleString('pt-br', {style: 'currency', currency: 'BRL'})</b> - essa função configura seu número com as regras monetárias brasileira. <br>
+                (ex: R$ 1.143,50)</li>
+            <li><b>.tolength</b> - conta o número de caracters</li>
+            <li><b>.toLowerCase()</b> -  torna todas as letras minúsculas</li>
+        </ul>
+        <h2>Conversão de tipo</h2>
+        <ul>
+            <li>String &rarr; number = evelopar o comando prompt com number()
+            <pre>
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        alert(`Resultado ${n1} + ${n2} = ${s}`)
+            </pre>
+        (Obs: É uma característica do comando prompt tratar as informações das variáveis como string.)
+        </li><br>
+
+        <li>Number &rarr; String = usar o comando String(variável) ou variável.toString 
+        <pre>
+        var n1 = Number(window.prompt('Digite um número: '))
+        var n2 = Number(window.prompt('Digite outro número: '))
+        var s = n1 + n2
+        alert('O resultado é ' + string(s))
+        </pre>
+        Obs: nesse caso é inútil mas foi só um exemplo
+        </li>
+    </ul>
+    <h2>Operadores</h2>
+    <p>
+        Nesse curso que estou fazendo vou estudar apenas as famílias dos operadores aritiméticos, de atribuição, relacionais, lógicos e ternários.
+    </p>
+    <h3>Operador aritimético</h3>
+    <p>Operadores utilizados para fazer cáculos. São operadores binários (dois operandos). Ordem de precedência:</p>
+    <p class="ari">() &rarr; ** &rarr; * % / &rarr; + -</p>
+    <ul>
+        <li>** &rarr; potência</li>
+        <li>*  &rarr; multiplicação</li>
+        <li>/  &rarr; divisão</li>
+        <li>%  &rarr; resto (da divisão)</li>
+        <li>+  &rarr; adição</li>
+        <li>-  &rarr; subtração</li>
+    </ul>
+    
+    <h3>Operador de atribuição</h3>
+    <p>
+        São operadores que guardam as informações nas variáveis.
+    </p>
+    <ul>
+        <li>Atribuição simples &rarr; recebe um valor inicial (=)</li>
+        <li>Auto-atribuição &rarr; soma um valor ao seu valor próprio valor
+        
+        </li>
+        <pre>
+            var b = 2       var a = 9
+            b = n + 3       a = a * 2
+            b = 5           a = 18
+            b = n * 2       a = a - 8
+            b = 10          a = 10
+        </pre>
+        Simplificação da auto-atribuição:
+        <pre>
+            var b = 2   var x = 3   var a = 9
+            b += 3      x %= 2      a /= 2
+            b =  5      x = 1       a = 4.5
+            b -= 1      x *= 7      a *= 5
+            6 = 4       x = 7       a = 22.5
+        </pre>
+    </ul>
+    <h3>Operador de incremento (e decremento)</h3>
+    <p>O incremento soma 1 ao valor da variável e o decremento subtrai 1.</p>
+    <ul>
+        <li>Pré-incremento &rarr; ++ antes da variável</li>
+        <pre>
+            Ex: >var x = 3
+                >++x
+                4
+                >++X
+                5
+                >++X
+                6
+        </pre>
+    <li>Pós-incremento &rarr; ++ depois da variável</li>
+        <pre>
+            Ex: >var y = 10
+                >y++
+                10
+                >y
+                11
+No pós incremento a soma é feita depois.        
+        </pre>
+    <li>
+        Pré-decremento &rarr; -- antes da variável
+    </li>
+            <pre>
+             Ex:>var b = 7
+                >--b
+                6
+                >--6
+                5
+            </pre>
+    <li>Pós-decremento</li>
+    <pre>
+            Ex: >var a = 4
+                >a--
+                4
+                >a
+                3
+    </pre>
+    </ul>
+    <h3>Operadores relacionais</h3>
+    <p>Compara as informações das variáveis com:</p>
+    <ul>
+<li>> &rarr; maior que</li>
+<li>< &rarr; menor que</li>
+<li>>= &rarr; maior ou igual</li>
+<li><= &rarr; menor ou igual</li>
+<li>== &rarr; igual</li>
+<li>!= &rarr; diferente</li>
+    </ul>
+<p>Esses operadores acima comparam o valor da variável e não o tipo. Ou seja (número) 5 == '5' (string pq tem esses outros caracters) o operador considera true.</p>
+<p>Para comparar tipos com o operador relacional, precisamos utilizar o operador relacional de identidade (igualdade restrita). Basta adicionar mais um sinal de = ao operador.</p>
+<p class="ex">EXEMPLO:</p> 
+<p class="ex">5 === '5' false</p>
+<p class="ex">5 !== '5' true</p>
+<h3>Operadores lógicos</h3>
+<ul>
+    <li>! (negação) - operador unário</li>
+    <pre>
+O operador mais fácil. Só é errado, false, negado o que for atrelado à <br> operador. 
+Ex: Não aceitamos candidatos de outras cidades (São Paulo)
+    ! são paulo = dispensado
+    
+    </pre>
+    <li>&& ('e' lógico) - conjunção</li>
+    <pre>
+        T && T = true 
+        T && F = false
+        F && T = false
+        F && F = false 
+Os dois operandos tem que conter a informação correta, requisitada, 
+verdadeira. Ex: 
+    Para essa vaga é necessário ser mulher e solteira
+    mulher && solteira = contratada
+    homem && solteiro  = dispensado
+    mulher && casada   = dispensada
+    </pre>
+    <li>|| ('ou' lógico) - disjunção</li>
+    <pre>
+        T || T = true 
+        T || F = true
+        F || T = true 
+        F || F = false
+Basta que um dos operandos seja o correto, requisitado, verdadeiro.
+Ex: Para essa vaga precisamos de uma pessoa solteira.
+    mulher || solteira = contratada
+    homem  || solteiro = contratado
+    Homem  || casado   = dispensado
+    </pre>
+<h3 id="precedencia">Ordem de precedência dos operadores</h3>
+<p>Aritiméticos &rarr; Relacionais &rarr; Lógicos</p>
+<pre>
+<ins>1º  ()          sem ordem         !</ins>
+<ins>2º  **           interna          &&</ins>
+<ins>3º  * % /                         ||</ins>
+<ins>4º  + -                             </ins>
+</pre>
+</ul>
+<h3>Operadore ternário</h3>
+<p>Tem 3 operandos, por isso o nome.</p>
+<p class="ari">Teste <span class="ter">?</span> true <span class="ter">:</span>  false</p>
+<p>Avalia se a variável está dentro do exigido, certa, verdadeira. </p>
+<p>Exemplo:</p>
+<pre>
+    Var nota = 9
+    nota >= 7 ? 'aprovado' : 'reprovado'
+    aprovado
+
+</pre>
+
+<h2>DOM - Document Object Model</h2>
+
+<p>Árvore DOM é a organização hierarquica dos elementos que compõe uma página web ou projeto. A hierarquia começa no window (o navegador), o window possui todos os outros elementos.</p>
+<p>EXEMPLO:</p>
+
+<img src="dom.jpg.crdownload" alt="">
+
+<h3>Métodos de acesso elementos DOM</h3>
+<ul>
+    <li>Por Marca - <strong>getElementByTagName</strong>: é bem genérico pois seleciona por tag, sendo assim se tem mais de uma tag iguais ele seleciona todas. Caso queira selecionar uma específica por esse método tem que específicar pela numeração entre colchetes no final da declaração, sendo 0 a primeira. </li>
+    <li>Por nome - <strong>getElementByName</strong>: seleciona elementos com o parâmetro Name = ""</li>
+    <li>Por Id - <strong>getElementById</strong>: tag com parãmentro Id = ""</li>
+    <li>Por class - <strong>getElementByClassName</strong>: tag com parâmentro class = ""</li>
+    <li>Por Seletor - querrySelector: selecionar tags com parâmetro Id e class, basta usar a formatação do css.</li>
+    <li>Por nome - <strong>getElementByName</strong>: tag com parâmetro name = ""</li>
+</ul>
+
+<img src="get.png" alt="Captura de elementos DOM" class="fuc">
+
+<h3>Eventos DOM</h3>
+<p>Evento é tudo aquilo que pode acontecer com um elemento, os mais comuns são eventos com o mouse (ex: clicar, passar o mouse em cima, tirar o mouse). As funcões são programadas em blocos no JS e só são executadas quando o evento DOM acontece. </p>
+
+<img src="func.png" alt="Funções em JavaScript" class="fuc">
+
+</main>
+</body>
+</html>

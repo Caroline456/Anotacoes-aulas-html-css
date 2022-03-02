@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+<h1>Conhecimentos em CSS3</h1>
+<h2>Anatomia de um código CSS</h2>
+<p>fazer um esquema em imagem depois</p>
+<h2>Estilo inline</h2>
+<p>É o tipo menos indicado pois as alterações tem que ser feita em cada tag separadamente</p>
+<p>EXEMPLO:</p>
+    <ul>
+        <li>&lt;h1 style="" &gt;Título principal&lt;/h1&gt;</li>
+        <li>&lt;h2 style="" &gt;Sub título &lt;/h2&gt;</li>
+    
+    </ul>
+<h2>Estilo local</h2>
+<p>Indicado para projetos pequenos (poucas páginas), mas ainda sim não é a melhor opção. As configurações são aplicadas na área head com a tag &lt;style&gt;, sendo assim são alterações por página.</p>
+<p>EXEMPLO:</p>
+    <pre>
+        <code>
+            &lt;head&gt;
+            &lt;meta charset="UTF-8"&gt;
+            &lt;name="viewport" content="width=device-width"&gt;
+            &lt;title&gt;Estilo local&lt;/title&gt;
+            &lt;style&gt;
+                body &#123;
+                    background-color
+                    text-align
+                    color
+                    font-family
+                    &#125;
+                h1 &#123;
+                    background-color
+                    font-family
+                    color
+                    font-size
+                    text-align
+                    &#125;
+            &lt;head&gt;
+        </code>
+    </pre>
+
+<h2>Estilo externo</h2>
+<p>É a melhor opção, permite criar um arquivo onde você faz as alterações e o estilo é aplicado em todas as páginas, isso por meio de um link na área head.</p>
+<p>Você abre um link&#058;css na área head e cria um arquivo .css, esse arquivo vai abrir uma guia de edição de estilo. Para prevenir erros adicionar a regra @charset = "UTF-8" no início do código. Adicionar esse link em todas as páginas que vão receber o estilo.</p>
+<p>Lembrete: segurar Ctrl e clicar em cima do nome sugerido no href para criar o arquivo de stilo</p>
+
+<h2>Tipografia e harmonia de cores</h2>
+<p>Assim como as cores passam sentimento e tem significado as fontes de texto também. É necessário sempre harmonizar texto e cores.</p>
+    <p>Dicas de sites úteis para criação de peletas de cores:</p>
+    <ul>
+        <li>Adobe color</li>
+        <li>Paletton</li>
+        <li>Coolers</li>
+    </ul>
+<h3>Tamanhos de fontes</h3>
+<p>Medidas indicadas pelo W3C px (medida absoluta) ou em (medida relativa). 1em = 2px</p>
+<p>Algumas unidade de medida para fonte:</p>
+    <ul>
+        <li>em - altura relativa ao M maiúslo da fonte</li>
+        <li>ex - altura relativa ao x minúsculo da fonte</li>
+        <li>rem - altura relativo à fonte selecionada no bady, tipo em</li>
+        <li>vw -  porcentagem da largura da viewport</li>
+        <li>vh -  porcentagem da altura da viewport</li>
+        <li>% - porcentagem geral</li>
+    </ul>
+
+<h3>Aplicação de cores em css</h3>
+<p>As cores podem ser representadas por:</p>
+    <ul>
+        <li>Nomes -  bem limitado (ex: blue)</li>
+        <li>Código hexadecimal - mais popular e fácil de reproduzir (ex: &#35;0000ff;)</li>
+        <li>RGB (red, green, blue) - expressa uma cor com base na concentração dessas 3 cores (ex: 0, 0, 255)</li>
+        <li>HSL (Hue, sturation, luminosity) - expressa a cor configurações de matização, saturação e luminosidade (ex: 240, 100%, 50%)</li>
+    </ul>
+<p>Para aplicação de gradiente utilizar background-image. Você pode editar seu gradiente com quantas cores quiser basta aplicá-las entre parenteses depois do background-image. Também pode encolher o sentido do gradiente usando os comandos to top, right, left, to bottom e em graus caso comece dos cantos. </p>
+    <p>EXEMPLO 1:</p>
+    <pre>
+        <code>
+            body &#123;
+                background-image: linear-gradient (45deg, cor1, cor2, cor3,)
+                &#125;
+        </code>
+    </pre>
+    <p>EXEMPO 2:</p>
+    <pre>
+        <code>
+            body &#123;
+                background-image: linear-gradient (to top, cor1, cor2)
+                &#125;
+        </code>
+    </pre>
+
+<h2>Seletor id</h2>
+<p>É um seletor CSS que permite a edição individual de uma tag que tenha outras iguais na página. Toda tag que receber o seletor id vai ter seu estilo editado separadamente das demais, mas atenção, só pode ter um seletor id por página.</p>
+    <pre>
+        <code>
+            No HTML:
+            &lt;body&gt;
+                &lt;h1 id="principal"&gt; Título principal &lt;/h1&gt;
+            &lt;/body&gt;
+
+            Aplicar no CSS:
+            &lt;style&gt;
+                h1#principal {
+                background-color: blue;
+                color: whit;
+            }
+            &lt;style&gt;
+        </code>
+    </pre>
+<p>Essa tag h1 que recebeu o seletor id="principal" receberá edições diferentes das outras tags h1 que não tem o id. </p>
+
+<h2>Seletor class</h2>
+<p>Tem basicamente a mesma utilidade do seletor id, porém pode ter classes diferentes e mais de uma igual na mesma página. </p>
+    <pre>
+        <code>
+            No HTML: 
+        &lt;body&gt;
+        &lt;h2 class="basico"&gt;CSS básico&lt;/h2&gt;
+        &lt;h2 class="inter"&gt;CSS intermediário&lt;/h2&gt;
+        &lt;h2 class="avan"&gt;CSS avançado&lt;/h2&gt;
+        &lt;body&gt;
+
+        Aplicar no CSS:
+        &lt;style&gt;
+        .basico {
+            color: darkgreen;
+        }
+        .inter {
+            color: darkyellow;
+        }
+        .avan {
+            color: darkred;
+        }
+        &lt;/style&gt;
+        </code>
+    </pre>
+<p>Cada um dos &lt;h2&gt; receberam uma cor diferente, de acordo com a class.</p>
+<h2>Pseudo-classes</h2>
+<p>Fazem alterações de estilo interativas. Você atrela a tag desejada à pseudo-classe por mei do : (dois pontos).</p>
+<pre>
+    Ex: div:hover {
+        background-color: green;
+    }
+        div > p {
+            display: none;
+        }
+
+    O sinal &gt; indica que a tag &lt;p&gt; está localizada dentro do campo de domínio da tag &lt;div&gt;
+</pre>
+
+<h3>Pseudo-classes que aprendi até agora:</h3>
+    <ul>
+        <li>:hover - faz alterações ao passar o mouse em cima do elemeto</li>
+        <li>:display - faz alterações de visibilidade do elemento</li>
+        <li>:visited - faz alterações se um link ja foi visitado</li>
+        <li>:active - faz alterações se clicar no elemento</li>
+    </ul>
+
+
+    <a href="index.html">&larr;Voltar</a>
+</main>
+</body>
+</html>

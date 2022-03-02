@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="my.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilizando links</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+<h1>Utilizando links</h1>
+<h2>Entendendo os parâmetros</h2>
+    <p>A utilização de links é muito importante quando precisamos conectar nosso site à outros ou até mesmo conectar páginas do nosso próprio site. Para utilizar links de sites externos bosta utilizar a URL na tag &lt;a&gt; e para links internos basta o nome da pasta na tag &lt;a&gt;.</p>
+    <p>Dentro da tag &lt;a&gt; termos os parâmetros <strong>target</strong> (onde podemos escolher se o link será aberto na mesma página ou em outra guia) e o parâmetro <strong>rel</strong> (ajuda o mecanismo de busca entender nosso sistema de navegação, basicamente diz a origem do link.)</p> 
+    <ul>
+        <li>target&#61;"_self" &rarr; Abre o link na mesma página (indicado para links internos, páginas que pertencem ao seu site)</li>
+        <li>target&#61;"_blank" &rarr; Abre o link em nova guia (indicado para links externos, outros sites)</li>
+    </ul>
+    <p>
+        <ul>
+            <li>rel&#61;"next" &rarr; indica que o link é a próxima página.</li>
+            <li>rel&#61;"prev" &rarr; indica que o link é a página anterior </li>
+            <li>rel&#61;"author" &rarr; indica que o link vai para o site do autor do artigo atual</li>
+            <li>rel&#61;"nofollow" &rarr; indinca link pago ou não confiável, onde o mecanismo de busca não perpetua a busca.</li>
+            <li>rel&#61;"external" &rarr; indica que o link vai para um site que não pertence ao seu, é um link externo.</li>
+        </ul>
+    </p>
+    <p>EXEMPLO LINK EXTERNO:</p>
+    <p>Tudo que estou aprendendo sobre HTML e CSS é pelo canal do youtube do <br> <strong>&lt;a href&#61;"https://youtube.com/cursoemvideo" target&#61;"_blank" rel&#61;"external"&gt;curso em vídeo&lt;/a&gt;</strong></p>
+    <P>Tudo que estou aprendendo sobre HTML e CSS é pelo canal do youtube do <br><a href="https://youtube.com/cursoemvideo" target="_blank" rel="external">Curso em vídeo</a>.</P>
+    <p>EXEMPLO LINK INTERNO:</p>
+    <p>Você pode voltar à página anterior clicando <br> <strong>&lt;a href&#61;"index.html" target&#61;"_self" rel&#61;"prev"&gt;aqui&lt;/a&gt;</strong></p>
+<h2>Links para download</h2>
+<p>Basta usar a mesma tag para links, você pode adicionar parãmetros para configurar o downloado, como por exemplo o parâmetro download e type.</p>
+<p>EXEMPLO: <br>
+Para baixar o PDF da aula clique <a href="livro/Aula 1.PDF.PDF" download="livro/Aula1.PDF.PDF" type="aplicattion/pdf" target="_blank">aqui</a>
+</p>
+<p>&lt;a href&#61;"arquivo desejado" download&#61;"mesmo arquivo de href" type&#61;"aplicattion/pdf"</p>
+<p>Você pode adicionar o parâmetro target&#61;"_blank" caso o download não seja iniciado automaticamente e o link seja aberto.</p>
+
+    <p><a href="index.html" target="_self" rel="prev">&larr; voltar à página anterior</a>.</p>
+</main>
+</body>
+</html>

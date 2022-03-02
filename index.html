@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="my.ico" type="image/x-icon">
+    <title>Treinando</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+<h1 style="text-align: center; background-color: #c4a44ce8;">HTML5 - CSS3 - JavaScript(2018)</h1>
+<h1>Introdução à programação</h1>
+<p><a href="historia.html">Clique aqui</a></p>
+<h1>CSS3</h1>
+    <a href="stilo.html">Clique aqui</a>
+<h1>JavaScript</h1>
+<a href="javas.html">Clique aqui</a>
+<h1>HTML5</h1>
+<h2>Hierarquia de títulos</h2>
+<p>As tags &lt;h&gt; (heading = h1, h2, h3...) servem para dar níveis aos títulos.<br>
+    Ou seja:<br> &lt;h1&gt; é igual ao título principal. E podem sim existir mais de um no seu site.<br>
+    &lt;h2&gt; é igual a subtítulo. para cada subtítulo uma tag, assim como para os títulos principais. <br>
+    &lt;h3&gt; é igual ao subtítulo do subtítulo e assim por diante. <br>
+    &rarr;As tags &lt;h&gt; vão até a de número &lt;h6&gt; mais que isso o texto ficará complexo de mais, oque tira o interresse do cliente. &#x1F609;
+</p>
+<h2>Símbolos e emojis</h2>
+<P>A utilização de símbolos e emojis é muito simples, abaixo exemplificarei o passo a passo de cada um.</P>
+<h3>Símbolos</h3>
+<p> A estrutura usada para símbolos é: (E comercial + código + ;).<br>
+    <br><strong>&#38</strong>(código)<strong>;</strong> <br> <br>
+    EXEMPLOS: <br>
+    &#38;rarr; = &rarr; <br>
+    &#38;uarr; = &uarr; <br>
+    &#38;euro; = &euro; <br>
+    &#38;Delta; = &Delta; <br>
+    &#38;reg; = &reg;
+</p>
+<h3>Emojis</h3>
+<p>A estrutura usada para emojis é: (E comercial + # + x ( minúsculo) + código + ;) <br><br>
+<strong>&#38;#x</strong>(código)<strong>;</strong></p>
+<p>Os códigos de cada emoji podem ser encontrados no site  EmojiPedia. Utilizamos apenas o final do código após o símbolo +.</p>
+<p>EXEMPLOS:</p>
+<P>&#38#x1F61B; = &#x1F61B; <br>
+&#38#x1F923; = &#x1F923; <br>
+&#38#x2728; = &#x2728; <br>
+&#38#x1F99E; = &#x1F99E;
+</P>
+<h2>Imagens</h2>
+<P>Primeiramente devemos utilizar imagens livres, ou seja, imagens que os direitos autorais permitam a replicação para fins comerciais. Podemos pegar no google filtrando imagens livres com a ferramenta de pesquisa. Ou podemos utilizar sites expecíficos, como:<br>
+&rarr; PEXELS <br>
+&rarr;UNSPLASH</P>
+<p>Os formatos que podemos utilizar são: <br>
+    JPEG - possui melhor formato de compactação. <br>
+    PNG - permite transparência. </p>
+<P>Para o ajustar tamanho, utilizamos um programa (gimp, photoshop..) e adequamos à nossa necessidade.
+Devemos salvar as imagens que formos utilizar na mesma pasta do arquivo do VScode. Podem ser criadas subpastas para facilitar a organização.</P>
+<p>Para inserir a imagem utilizamos a tag: <strong>&lt;img src= "" alt= ""&gt; </strong></P>
+<p>Entre as aspas de src podemos botar o nome do arquivo ou fazer uma busca clicando o curso do mouse entre as aspas e clicando "Ctrl+space", irá aparecer as opções de imagens salvas previamente na pasta. <br>
+Entre as aspas de alt vai a descrição da imagem, ela é muito importante pois é lida por aplicativos de inclusão para cegos, por exemplo, e aparece em pop-up quando o cursor do mouse passa por cima.
+</P>
+<p><img src="css3.full.png" alt="Logo CSS3">
+<img src="html.200.png" alt="Logo HTML5">
+<img src="" alt=""></p>
+<p>Também podemos utilizar imagens direto da web apenas utilizando o URL no lugar do arqueivo, porém caso a imagem seja apagada do servido, ela sumirá do seu site, então é melhor sempre salvar as suas imagens no seu próprio servidor. <br>
+<p>EXEMPLO: <BR>
+</BR>&lt;img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2038874-1720087.png" alt="Logo JavaScript"&gt;</p>
+<p><img src="https://cdn.iconscout.com/icon/free/png-256/javascript-2038874-1720087.png" alt="Logo JavaScript"></p>
+<h2>Imagens dinâmicas</h2>
+<p>Imagen dinâmica é como chamamos a imagem que adapta seu tamanho à tela do cliente, ou seja, nada de barra de rolagem lateral para vizualizar a imagem (ninguém gosta, não é verdade?). Para fazer isso, temos que ter a mesma imagem formatada em resoluções diferentes e usar a tag &lt;picture&gt; junto com a tag &lt;img&gt;. A tag &lt;source&gt; (selecionar a opção source:media:type) vai servir para integrar as outas opções de formatação de imagem ao código, é importante respeitar a ordem do tamanho das imagens (crescente, a ordem é de baixo para cima).</p>
+<p>EXEMPLO:</p>
+<img src="ex.img-int.png" alt="Código imagem interativa">
+<ul>
+    <li>media&#61;"(min-width:)" - por padrão vai largura minima, porém pode ser ajustado para largura máxima como na imagem acima. É o parâmetro para definir quando a imagem deve ajustar o tamanho. Utilizamos a própria resolução da imagem, podemos deixar uma folga de 50px para a troca ser mais precisa </li>
+    <li>srcset&#61;" " - arquivo</li>
+    <li>Type&#61; " " - identificação do tipo de arquivo (definido pelo IANA)</li>
+</ul>
+<p>A imagem abaixo é interativa, se você aumentar ou diminuir o tamanho da tela (caso esteja em desktop) conseguirá ver a alteração no tamanho das imagens (foram utilizadas imagens diferentes apenas para facilitar a visualização e se tornar mais didático).</p>
+<picture>
+    <source media="(max-width: 750px)" srcset="imgd/foto-p.png" type="image/png">
+    <source media="(max-width: 1050px)" srcset="imgd/foto-m.png" type="image/png">
+    <img src="imgd/foto-g.png " alt="Imagem dinâmica">
+</picture>
+<h2>Favicon</h2>
+<p>O Favicon é a imagem que aparece na guia quando seu site é aberto.</p>
+<p><img src="favicon500.png" alt=""></p>
+<p>Para adicionar um ao seu site basta abrir a tag &lt;link:favicon&gt; na área head do HTML. A imagem deve estar no formato .ico e ja salva na pasta. Sites que você pode achar icons já prontos ou criar o seu:</p>
+<p>
+    <ul>
+        <li>Favicon.cc &rarr; crie favicons simples</li>
+        <li>favicon archiev &rarr; favicons prontos</li>
+        <li>favicon.io &rarr; crie favicons com mais detalhes, mais qualidade.</li>
+    </ul>
+</p>
+<h2>Listas</h2>
+<p>Listas são imporantes porque a todo momento utilizamos sem nem perceber. Por exemplo, quando comecei fazer esse projeto ainda não sabia como usar listas no HTML, por isso alguns exemplos ficaram meio zoados, muito colados à margem do site (projeto sem CSS). No tópico anterior, sobe favicon, já sabia como utilizar e a lista deixou as informações mais organizadas. Mas como utilizar listas no HTML?</p>
+<p>Temos três tipos de listas: <br>
+     <ul>
+         <li><strong>Ordenadas &lt;ol&gt;:</strong> listas com marcador numérico que corrigem a si mesmas caso você adicione um item no meio da lista posteriomente. EXEMPLO:
+             <ol>
+                 <li>ir à famácia</li>
+                 <li>ir ao shopping</li>
+                 <li>ir ao mercado</li>
+                 <li>voltar para casa</li>
+             </ol>
+             Essa é sua lista de coisas à fazer, mas após termina-lá você percebeu que primeiro precisa ir ao banco para sacar dinheiro. Se você adicionar esse novo item ao topo da lista, os números serão corrigidos automaticamente. 
+             <ol>
+                 <li>ir ao banco</li>
+                <li>ir à famácia</li>
+                <li>ir ao shopping</li>
+                <li>ir ao mercado</li>
+                <li>voltar para casa</li>
+            </ol>
+            Claro que isso foi apenas um exemplo simples, em algum projeto podem aparecer listas imensas e essa ferramenta poderá fazer toda a diferença para agilizar seu trabalho. <br>
+            Para esse tipo de lista temos a opção de usar números romanos e letras também, usando o parâmetro type&#61;"".
+        </li> <br>
+         <li><strong>Não ordenadas &lt;ul&gt;:</strong> Listas onde a ordem dos itens não tem importância e os marcadores são símbolos. EXEMPLO:
+            <UL type="circle">
+                <li>Pão</li>
+                <li>Leite</li>
+                <li>Margarina</li>
+                <li>Café</li>
+            </UL>
+        Para alterar o marcador basta usar o parâmetro type&#61;"" e escolher entre:
+        <ul type="circle"><li>Circle</li></ul>
+        </li>
+        <ul type="disc"><li>Disc</li></ul>
+        <ul type="square"><li>Square</li></ul>
+        <strong><li>De definição &lt;dt&gt;:</strong> São usadas quando precisamos dar definição aos termos usados. É necessário uma tag para o termo &lt;dt&gt; e uma tag para a definição &lt;dd&gt;. EXEMPLO: <br>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação para criação de um site</dd>
+        <dt>JavaScript</dt>
+        <dd>Linguagem de programação para dar interatividade à um site</dd>
+    </li>
+    </ul>
+    </p>
+<h2>Utilizando links</h2>
+Na próxima página vamos aprender como utilizar links no nosso site, basta <a href="pag002.html" target="_self" rel="next">clicar aqui</a>.
+<h2>Principais formatações</h2>
+<p>Vamos aprender a usar negrito, itálico, marcador de texto, texto sub e sobre escrito, dentre outras utilizando as tags semânticas do HTML5:</p>
+<ul>
+    <li>Negrito / Destaque: <strong>&lt;strong&gt;</strong></li>
+    <li>Itálico / Ênfase: <em>&lt;em&gt;</em></li>
+    <li>Texto marcado: <mark style="background-color: aquamarine;">&lt;mark&gt;</mark></li>
+    <li>Texto sobrescrito: &lt;sup&gt; &rarr; <sup>sup</sup></li>
+    <li>Texto subscrito: &lt;sub&gt; &rarr; <sub>sub</sub></li>
+    <li>Texto deletado: &lt;del&gt; &rarr; <del>del</del> </li>
+    <li>Texto inserido: &lt;ins&gt; &rarr; <ins>ins</ins> </li>
+</ul>
+<p>Podemos alterar a cor padrão da marcação de texto no nosso projeto. Basta abrir uma tag &lt;style&gt; na área head e abrir o parâmetro mark {background-color:}. Caso precise pode mudar a cor individualmente de cada marcação usando o parâmetro style&#61;"" dentro da tag &lt;mark&gt;</p>
+<h2>Outras formatações</h2>
+<ul>
+    <li><strong>Código fonte:</strong> &lt;code&gt; essa tag muda a fonte de escrita do códgo para uma fonte monoespaçada, oque permite melhor leitura dos caracters.
+        <br>
+    O comando <code>document.getElementById("teste")</code> é escrito em linguagem JavaScript. Porém para ele ficar na formatação em que vemos abaixo, devemos envelopar o texto ja com a tag &lt;code&gt; com mais uma tag, a tag  &lt;pre&gt;, ela preserva a indetação.</p>
+    <pre>
+        <code>
+                num= int(input('digite um número)) 
+                I if num % 2 ==:
+                print(f'O número {num} é PAR') I else
+                print(f'O número {num} é IMPAR')
+                print('Fim do programa')
+        </code> 
+    </pre>
+    </li>
+</ul>
+<p><img src="tagprecerta.png" alt="Código no HTML"></p>
+<ul>
+    <li><strong>Citações:</strong> &lt;q&gt; para botar algo entre aspas corretamente. <br> EXEMPLO: Como ja dizia alguém <q>o computador é um burro rápido.</q></li> <br>
+    <li><strong>Citações completas:</strong> &lt;blockquote&gt; <br>
+    EXEMPLO: <br>
+    Segundo Gustavo Guanabara, no seu curso de HTML5 e CSS3 básico:
+<blockquote> O parágrafo lorem é um parágrafo de palavras aleatórias utilizados por programadores em testes &rarr; Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ab fugit facilis quaerat sed, odio laudantium minus natus explicabo impedit modi, harum accusantium alias odit reprehenderit sapiente nemo quasi nobis.</blockquote>
+É possivél botar a URL do site onde essa citação foi tirada, incluindo o parâmetro cite&#61;""
+</li> <br>
+<li><strong>Abreviações:</strong> &lt;abbr title&#61;""&gt; permite que apareça o significado da sigla quando passa o cursor do mouse por cima. <br> EXEMPLO: <abbr title="Hypertext Markup language">HTML</abbr>, <abbr title="Cascading Styles Sheets">CSS</abbr>, <abbr title="JavaScript">JS</abbr>, <abbr title="Carol Linda">CL</abbr></li>
+</ul>
+<h2>Desafio do Mapa</h2>
+    <p>Desafio 05 do repositório no GitHub. <a href="pag003.html" target="_self" rel="next">Clique aqui</a> para abrir.</p>
+
+    <h2>Desafio dos vídeos</h2>
+
+    <p>Abrir na <a href="pag004.html">próxima página</a></p>
+    </main>
+</body>
+</html>
